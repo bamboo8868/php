@@ -27,57 +27,45 @@ libreadline6-dev
 #配置脚本 configure_php.sh
 #!/bin/bash
 ./configure \
---prefix=/png/php/7.0.0 \
---enable-opcache \
---enable-fpm \
---enable-pdo \
---enable-sockets \
---enable-exif \
---enable-soap \
---enable-ftp \
---enable-wddx \
---enable-pcntl \
---enable-soap \
---enable-bcmath \
---enable-mbstring \
---enable-dba \
---enable-gd-native-ttf \
---enable-gd-jis-conv \
---enable-zip \
---enable-calendar \
---enable-shmop \
---enable-sysvmsg \
---enable-sysvsem \
---enable-sysvshm \
---with-mysqli \
---with-pdo-mysql \
---with-pdo-sqlite \
---with-iconv \
---with-gmp \
---with-pspell \
---with-xmlrpc \
---with-openssl \
---with-mhash \
---with-mcrypt \
---with-xsl \
---with-curl \
---with-pcre-regex \
---with-gd \
---with-jpeg-dir=/usr \
---with-png-dir=/usr \
---with-zlib-dir=/usr \
---with-xpm-dir=/usr \
---with-freetype-dir=/usr \
---with-gettext=/usr \
---with-zlib=/usr \
---with-bz2=/usr \
---with-recode=/usr \
---with-ldap \
---with-pear \
---with-readline \
---with-fpm-user=png \
---with-fpm-group=png \
---with-apxs2=/png/httpd/2.4.17/bin/apxs
+--prefix=/usr/local/php
+--disable-debug
+--disable-phpdbg
+--enable-mysqlnd
+--enable-bcmath
+--with-bz2=/usr
+--enable-calendar
+--with-curl
+--enable-exif
+--enable-fpm
+--with-freetype-dir
+--enable-ftp
+--with-gd
+--enable-gd-jis-conv
+--enable-gd-native-ttf
+--with-gettext=/usr
+--with-gmp
+--with-iconv
+--enable-intl
+--with-jpeg-dir
+--enable-mbstring
+--with-mcrypt
+--with-openssl
+--enable-pcntl
+--with-pdo-mysql=mysqlnd
+--with-png-dir
+--with-recode=/usr
+--enable-shmop
+--enable-soap
+--enable-sockets
+--enable-sysvmsg
+--enable-sysvsem
+--enable-sysvshm
+--enable-wddx
+--with-xmlrpc
+--with-xsl
+--with-zlib=/usr
+--enable-zip
+--with-mysqli=mysqlnd
 
 #编译安装
 make && make install
